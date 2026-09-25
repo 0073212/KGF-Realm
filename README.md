@@ -82,26 +82,79 @@ An end-to-end, high-performance web platform designed for luxury menswear retail
 
 ---
 
-## 3. How to Run This Project on Your Computer
+## 3. How to Clone, Pull & Run This Project Locally
 
-Follow these simple steps to run the complete project locally.
-
-### Step 1: Prerequisites
-Ensure you have the following installed on your machine:
-1. **Node.js (v18 or higher)**: Download and install the LTS version from [nodejs.org](https://nodejs.org/).
-2. **Python (v3.10 or higher)**: Download from [python.org](https://www.python.org/downloads/).  
-   *(⚠️ **Crucial on Windows**: Check the box **"Add python.exe to PATH"** during installation).*
+Follow these step-by-step instructions to clone, configure, and run this project on any computer (Windows, macOS, or Linux).
 
 ---
 
-### Step 2: Backend Setup & Launch
+### Step 1: Prerequisites
+Make sure your computer has the following tools installed:
+* **Git**: [git-scm.com](https://git-scm.com/)
+* **Node.js (v18 or higher)**: [nodejs.org](https://nodejs.org/) (Download LTS version)
+* **Python (v3.10 to v3.14)**: [python.org](https://www.python.org/downloads/)  
+  *(⚠️ **Crucial for Windows Users**: On the installer screen, make sure to check **"Add python.exe to PATH"** before clicking Install).*
 
-1. Open your terminal (**PowerShell** or **Command Prompt**) and navigate to the backend directory:
+---
+
+### Step 2: Clone the Repository to Your Computer
+
+Open your terminal (**Command Prompt**, **PowerShell**, or **Bash**) and run:
+
+```bash
+# 1. Clone the project from GitHub
+git clone https://github.com/0073212/KGF-Realm.git
+
+# 2. Enter into the project folder
+cd KGF-Realm
+```
+
+> **💡 How to pull future updates:**  
+> If updates are made to the repository later, simply run:
+> ```bash
+> git pull origin main
+> ```
+
+---
+
+### Step 3: Configure Environment Variables
+
+The backend needs an environment configuration file:
+1. Navigate to the `backend` folder:
    ```bash
    cd backend
    ```
+2. Copy the provided `.env.example` file to create your own `.env`:
+   * **Windows (PowerShell)**:
+     ```powershell
+     Copy-Item .env.example .env
+     ```
+   * **macOS / Linux / Bash**:
+     ```bash
+     cp .env.example .env
+     ```
 
-2. Install the required Python dependencies:
+*(The default `.env` is pre-configured with local fallback mode, so you don't need to change anything to test it immediately).*
+
+---
+
+### Step 4: Backend Setup & Launch
+
+Still inside the `backend/` folder:
+
+1. *(Optional but recommended)* Create and activate a Python virtual environment:
+   * **Windows**:
+     ```powershell
+     python -m venv venv
+     .\venv\Scripts\activate
+     ```
+   * **macOS / Linux**:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+2. Install all required backend packages:
    ```bash
    pip install -r requirements.txt
    ```
@@ -110,35 +163,61 @@ Ensure you have the following installed on your machine:
    ```bash
    python -m uvicorn server:app --reload --port 8000
    ```
-   * The backend will start on **`http://localhost:8000`**.
-   * Interactive Swagger documentation is accessible at **`http://localhost:8000/docs`**.
+   * The backend API will be live at: **`http://localhost:8000`**
+   * Interactive API documentation (Swagger UI): **`http://localhost:8000/docs`**
 
 ---
 
-### Step 3: Frontend Setup & Launch
+### Step 5: Frontend Setup & Launch
 
-1. Open a **second terminal window** and navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
+Open a **new, separate terminal window**, navigate to the project directory, and enter `frontend`:
 
-2. Install the frontend dependencies:
+```bash
+cd KGF-Realm/frontend
+```
+
+1. Install frontend dependencies:
    ```bash
    npm install
    ```
+   *(Windows note: If npm gives any rollup binary warning, simply run `npm install @rollup/rollup-win32-x64-msvc`)*
 
-3. Start the Vite development server:
+2. Start the Vite development server:
    ```bash
    npm run dev
    ```
-   * The frontend will start on **`http://localhost:5173`**.
+   * The frontend will start at: **`http://localhost:5173`**
 
 ---
 
-### Step 4: Open in Browser
+### Step 6: Open the Application
 
-Open your web browser and navigate to:
+Open your browser and navigate to:
 👉 **[http://localhost:5173](http://localhost:5173)**
+
+The frontend is already configured to automatically proxy API calls (`/api/...`) to the backend running on port 8000.
+
+---
+
+### ⚡ Quick Tip: One-Command Setup (Root Directory)
+If you prefer running both Frontend and Backend concurrently from the root directory:
+```bash
+# In the root KGF-Realm folder:
+npm run install:all
+npm run dev
+```
+
+---
+
+### 🛠️ Common Troubleshooting
+
+* **Problem**: `python is not recognized as an internal or external command`  
+  **Solution**: Python was not added to your system PATH. Re-run the Python installer, select "Modify", and check "Add Python to environment variables".
+* **Problem**: `Cannot find module @rollup/rollup-win32-x64-msvc` (on Windows)  
+  **Solution**: In the `frontend` folder, run `npm install @rollup/rollup-win32-x64-msvc`.
+* **Problem**: `Port 8000 or 5173 is already in use`  
+  **Solution**: Ensure no previous server instances are running in background terminals.
+
 
 ---
 
