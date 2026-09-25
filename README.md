@@ -82,67 +82,59 @@ An end-to-end, high-performance web platform designed for luxury menswear retail
 
 ---
 
-## 3. How to Clone, Pull & Run This Project Locally
+## 3. How to Run This Project on Your Computer
 
-Follow these step-by-step instructions to clone, configure, and run this project on any computer (Windows, macOS, or Linux).
-
----
-
-### Step 1: Prerequisites
-Make sure your computer has the following tools installed:
-* **Git**: [git-scm.com](https://git-scm.com/)
-* **Node.js (v18 or higher)**: [nodejs.org](https://nodejs.org/) (Download LTS version)
-* **Python (v3.10 to v3.14)**: [python.org](https://www.python.org/downloads/)  
-  *(⚠️ **Crucial for Windows Users**: On the installer screen, make sure to check **"Add python.exe to PATH"** before clicking Install).*
+Follow these complete, step-by-step instructions to clone, configure, and launch the project on your machine.
 
 ---
 
-### Step 2: Clone the Repository to Your Computer
-
-Open your terminal (**Command Prompt**, **PowerShell**, or **Bash**) and run:
-
+### Step 1: Clone the Repository
+Open your terminal (**PowerShell**, **Command Prompt**, or **Bash**) and run:
 ```bash
-# 1. Clone the project from GitHub
 git clone https://github.com/0073212/KGF-Realm.git
-
-# 2. Enter into the project folder
 cd KGF-Realm
 ```
 
-> **💡 How to pull future updates:**  
-> If updates are made to the repository later, simply run:
+> **💡 How to Pull the Latest Updates (for existing users):**  
+> If you already have the repository cloned on your machine and want to fetch the newest changes, run:
 > ```bash
 > git pull origin main
 > ```
 
 ---
 
+### Step 2: Prerequisites
+Make sure you have both **Node.js** and **Python** installed:
+1. **Node.js (v18 or higher)**: Download and install the LTS version from [nodejs.org](https://nodejs.org/).
+2. **Python (v3.10 or higher)**: Download from [python.org](https://www.python.org/downloads/).  
+   *(⚠️ **Windows Users**: Ensure you tick **"Add python.exe to PATH"** on the first installer screen).*
+
+---
+
 ### Step 3: Configure Environment Variables
+Copy the template configuration into a new `.env` file in the `backend/` folder:
 
-The backend needs an environment configuration file:
-1. Navigate to the `backend` folder:
-   ```bash
-   cd backend
-   ```
-2. Copy the provided `.env.example` file to create your own `.env`:
-   * **Windows (PowerShell)**:
-     ```powershell
-     Copy-Item .env.example .env
-     ```
-   * **macOS / Linux / Bash**:
-     ```bash
-     cp .env.example .env
-     ```
+* **On Windows (PowerShell / CMD)**:
+  ```powershell
+  copy backend\.env.example backend\.env
+  ```
+* **On macOS / Linux**:
+  ```bash
+  cp backend/.env.example backend/.env
+  ```
 
-*(The default `.env` is pre-configured with local fallback mode, so you don't need to change anything to test it immediately).*
+*(Note: Out-of-the-box, the app is preconfigured to run immediately using the built-in local JSON database — no external MongoDB setup is required to test!)*
 
 ---
 
 ### Step 4: Backend Setup & Launch
 
-Still inside the `backend/` folder:
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
 
-1. *(Optional but recommended)* Create and activate a Python virtual environment:
+2. *(Optional but recommended)* Create and activate a virtual environment:
    * **Windows**:
      ```powershell
      python -m venv venv
@@ -154,70 +146,52 @@ Still inside the `backend/` folder:
      source venv/bin/activate
      ```
 
-2. Install all required backend packages:
+3. Install backend dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Start the FastAPI backend server:
+4. Start the FastAPI backend server:
    ```bash
    python -m uvicorn server:app --reload --port 8000
    ```
-   * The backend API will be live at: **`http://localhost:8000`**
-   * Interactive API documentation (Swagger UI): **`http://localhost:8000/docs`**
+   * Backend will be live at: **`http://localhost:8000`**
+   * Interactive API docs (Swagger): **`http://localhost:8000/docs`**
 
 ---
 
 ### Step 5: Frontend Setup & Launch
 
-Open a **new, separate terminal window**, navigate to the project directory, and enter `frontend`:
+1. Open a **second terminal window** and navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
 
-```bash
-cd KGF-Realm/frontend
-```
-
-1. Install frontend dependencies:
+2. Install frontend dependencies:
    ```bash
    npm install
    ```
-   *(Windows note: If npm gives any rollup binary warning, simply run `npm install @rollup/rollup-win32-x64-msvc`)*
 
-2. Start the Vite development server:
+3. Start the Vite development server:
    ```bash
    npm run dev
    ```
-   * The frontend will start at: **`http://localhost:5173`**
+   * Frontend will be live at: **`http://localhost:5173`**
 
 ---
 
-### Step 6: Open the Application
-
-Open your browser and navigate to:
-👉 **[http://localhost:5173](http://localhost:5173)**
-
-The frontend is already configured to automatically proxy API calls (`/api/...`) to the backend running on port 8000.
-
----
-
-### ⚡ Quick Tip: One-Command Setup (Root Directory)
-If you prefer running both Frontend and Backend concurrently from the root directory:
+### ⚡ Alternative: One-Command Runner (Root Directory)
+If you prefer starting both servers together, install root dependencies and run:
 ```bash
-# In the root KGF-Realm folder:
-npm run install:all
+npm install
 npm run dev
 ```
+*(This starts both frontend and backend concurrently in a single terminal).*
 
 ---
 
-### 🛠️ Common Troubleshooting
-
-* **Problem**: `python is not recognized as an internal or external command`  
-  **Solution**: Python was not added to your system PATH. Re-run the Python installer, select "Modify", and check "Add Python to environment variables".
-* **Problem**: `Cannot find module @rollup/rollup-win32-x64-msvc` (on Windows)  
-  **Solution**: In the `frontend` folder, run `npm install @rollup/rollup-win32-x64-msvc`.
-* **Problem**: `Port 8000 or 5173 is already in use`  
-  **Solution**: Ensure no previous server instances are running in background terminals.
-
+### Step 6: Open in Browser
+Visit **[http://localhost:5173](http://localhost:5173)** in your browser to experience the KGF Realm!
 
 ---
 
