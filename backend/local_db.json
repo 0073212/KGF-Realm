@@ -1,0 +1,254 @@
+{
+  "users": [
+    {
+      "id": "ba039e76-e9a6-44ea-8479-b55373c32b19",
+      "email": "admin@kgf.com",
+      "name": "KGF Admin",
+      "role": "admin",
+      "password_hash": "$2b$12$iV9LzefjaYZIEVJn3dG4tudILrCEnmJEaqZWyQwEqgl1ukElCHjZK",
+      "created_at": "2026-09-25T07:50:51.278058+00:00"
+    },
+    {
+      "id": "8b2f6dac-3c7d-4b42-9790-99ab47b998cf",
+      "email": "present@gmail.com",
+      "name": "Present",
+      "role": "user",
+      "password_hash": "$2b$12$tX/VqxbWbOAWj79slImGB.s2xeN8dlxLV8pKQe8oKJqYSoJiFa3Z.",
+      "created_at": "2026-09-25T07:57:26.205249+00:00"
+    }
+  ],
+  "products": [
+    {
+      "id": "320930b9-d46e-46cd-ab74-430b99042de2",
+      "title": "Onyx Crewneck Tee",
+      "image_url": "https://images.unsplash.com/photo-1762914395034-67c2f8c73c59",
+      "price": 1899.0,
+      "specifications": "Heavyweight crewneck with reinforced collar. Pre-shrunk, garment-dyed for a faded matte tone.",
+      "category": "shirts",
+      "tags": [
+        "Trending"
+      ],
+      "fabric": "240 GSM Combed Cotton",
+      "sizes": "S, M, L, XL",
+      "color": "Jet Black",
+      "created_at": "2026-09-25T07:50:51.280294+00:00"
+    },
+    {
+      "id": "ca732a1b-0e6d-4319-a180-6fb6e17e33df",
+      "title": "Noir Oversized Shirt",
+      "image_url": "https://images.unsplash.com/photo-1627890458144-4c0c481bf4b8",
+      "price": 2499.0,
+      "specifications": "Drop-shoulder silhouette, mother-of-pearl buttons, single chest pocket.",
+      "category": "shirts",
+      "tags": [
+        "In-Store Only"
+      ],
+      "fabric": "Tencel Twill",
+      "sizes": "M, L, XL",
+      "color": "Smoke Charcoal",
+      "created_at": "2026-09-25T07:50:51.280734+00:00"
+    },
+    {
+      "id": "9b4008b0-7550-4e1a-98db-e3e913557f0a",
+      "title": "Midnight Lounge Joggers",
+      "image_url": "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+      "price": 2199.0,
+      "specifications": "Tapered fit, ribbed cuff, dual side pockets with hidden zip.",
+      "category": "pyjamas",
+      "tags": [
+        "Trending"
+      ],
+      "fabric": "French Terry",
+      "sizes": "S, M, L, XL",
+      "color": "Obsidian",
+      "created_at": "2026-09-25T07:50:51.281172+00:00"
+    },
+    {
+      "id": "06fcb0ea-3dc5-4026-8c85-7c909b4129a7",
+      "title": "Velvet Pyjama Set",
+      "image_url": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea",
+      "price": 3299.0,
+      "specifications": "Two-piece lounge set with gold piping detail. Hand-finished hems.",
+      "category": "pyjamas",
+      "tags": [],
+      "fabric": "Crushed Velvet",
+      "sizes": "M, L, XL",
+      "color": "Royal Black",
+      "created_at": "2026-09-25T07:50:51.281447+00:00"
+    },
+    {
+      "id": "437056b4-1810-498d-af3a-e220bf923310",
+      "title": "Regal Bomber Jacket",
+      "image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5",
+      "price": 5999.0,
+      "specifications": "Water-resistant outer, ribbed cuffs & hem, satin lining, YKK metal zip.",
+      "category": "jackets",
+      "tags": [
+        "Trending",
+        "In-Store Only"
+      ],
+      "fabric": "Technical Nylon Shell",
+      "sizes": "M, L, XL",
+      "color": "Matte Black",
+      "created_at": "2026-09-25T07:50:51.281865+00:00"
+    },
+    {
+      "id": "12191daf-f2d7-4a53-b32a-8b08c68e0310",
+      "title": "Bronze Leather Coat",
+      "image_url": "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+      "price": 12999.0,
+      "specifications": "Hand-stitched panels, quilted shoulder lining, antique brass hardware.",
+      "category": "jackets",
+      "tags": [
+        "In-Store Only"
+      ],
+      "fabric": "Full-Grain Leather",
+      "sizes": "L, XL",
+      "color": "Burnished Bronze",
+      "created_at": "2026-09-25T07:50:51.282569+00:00"
+    },
+    {
+      "id": "3221edf3-5848-4357-b4c2-781247d0b42d",
+      "title": "Shadow Runner Sneaker",
+      "image_url": "https://images.pexels.com/photos/9986259/pexels-photo-9986259.jpeg",
+      "price": 4499.0,
+      "specifications": "Cushioned midsole, carbon-rubber outsole, reinforced toe-cap.",
+      "category": "shoes",
+      "tags": [
+        "Trending"
+      ],
+      "fabric": "Knit Mesh + TPU",
+      "sizes": "UK 7, 8, 9, 10, 11",
+      "color": "Triple Black",
+      "created_at": "2026-09-25T07:50:51.283340+00:00"
+    },
+    {
+      "id": "92ead765-f712-434e-a6b2-7fbca1606705",
+      "title": "Phantom Low-Top",
+      "image_url": "https://images.pexels.com/photos/5930091/pexels-photo-5930091.jpeg",
+      "price": 3899.0,
+      "specifications": "Hand-finished suede upper, blind eyelet system, leather-lined collar.",
+      "category": "shoes",
+      "tags": [],
+      "fabric": "Italian Suede",
+      "sizes": "UK 7, 8, 9, 10",
+      "color": "Matte Onyx",
+      "created_at": "2026-09-25T07:50:51.283722+00:00"
+    },
+    {
+      "id": "71d6eaab-8ff5-4ed4-8502-5f9ac9ed2b08",
+      "title": "Chronograph Sovereign",
+      "image_url": "https://images.unsplash.com/photo-1618215650148-e8e61eae521c",
+      "price": 18999.0,
+      "specifications": "Sapphire crystal, Swiss quartz movement, sapphire-coated dial, 10ATM water resistance.",
+      "category": "watches",
+      "tags": [
+        "Trending"
+      ],
+      "fabric": "316L Stainless Steel",
+      "sizes": "40mm Case",
+      "color": "Champagne Gold",
+      "created_at": "2026-09-25T07:50:51.284036+00:00"
+    },
+    {
+      "id": "0a8f15a8-bc89-4328-95f9-bf6c562c4766",
+      "title": "Argent Auto-Movement",
+      "image_url": "https://images.unsplash.com/photo-1547996160-81dfa63595aa",
+      "price": 24999.0,
+      "specifications": "Automatic movement, exhibition caseback, screw-down crown.",
+      "category": "watches",
+      "tags": [
+        "In-Store Only"
+      ],
+      "fabric": "Brushed Steel",
+      "sizes": "42mm Case",
+      "color": "Silver / Black Dial",
+      "created_at": "2026-09-25T07:50:51.284383+00:00"
+    },
+    {
+      "id": "2dd35a4a-f29a-4057-ab55-0fc8aee00a44",
+      "title": "Aviator Tint Eyewear",
+      "image_url": "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+      "price": 2799.0,
+      "specifications": "Polarized lenses, UV400, adjustable nose pads, microfiber pouch included.",
+      "category": "eyewear",
+      "tags": [],
+      "fabric": "Titanium Frame",
+      "sizes": "One Size",
+      "color": "Gunmetal",
+      "created_at": "2026-09-25T07:50:51.284697+00:00"
+    },
+    {
+      "id": "fc4c2d8f-931e-4023-bc0b-5a54a55cd62e",
+      "title": "Royal Wayfarer",
+      "image_url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+      "price": 2299.0,
+      "specifications": "Hand-polished acetate, gradient brown lenses, spring-loaded hinges.",
+      "category": "eyewear",
+      "tags": [
+        "Trending"
+      ],
+      "fabric": "Acetate",
+      "sizes": "One Size",
+      "color": "Tortoise Black",
+      "created_at": "2026-09-25T07:50:51.285034+00:00"
+    },
+    {
+      "id": "b7ee1554-236e-48c7-ace5-3369363e14b4",
+      "title": "Noir Eau de Parfum 100ml",
+      "image_url": "https://images.unsplash.com/photo-1698877577733-65ae7dee328c",
+      "price": 4499.0,
+      "specifications": "Notes: bergamot, oud, leather, smoked vanilla. Long-lasting EDP concentration.",
+      "category": "grooming",
+      "tags": [
+        "Trending"
+      ],
+      "fabric": "Glass Flacon",
+      "sizes": "100ml",
+      "color": "Smoke Black",
+      "created_at": "2026-09-25T07:50:51.285366+00:00"
+    },
+    {
+      "id": "cec2e4d6-3091-47bd-a868-7f170900e9a4",
+      "title": "Leather Cologne 75ml",
+      "image_url": "https://images.unsplash.com/photo-1654617058572-f1f473581778",
+      "price": 3899.0,
+      "specifications": "Notes: saffron, suede, sandalwood. Designed for evening wear.",
+      "category": "grooming",
+      "tags": [],
+      "fabric": "Glass + Brass Cap",
+      "sizes": "75ml",
+      "color": "Amber",
+      "created_at": "2026-09-25T07:50:51.285829+00:00"
+    },
+    {
+      "id": "9156a49f-8a3b-4b3c-9dad-a601a2432a28",
+      "title": "Solid Brass Buckle Belt",
+      "image_url": "https://images.unsplash.com/photo-1624222247344-550fb60583dc",
+      "price": 1799.0,
+      "specifications": "Solid brass buckle, hand-burnished edges, single-piece leather strap.",
+      "category": "accessories",
+      "tags": [],
+      "fabric": "Italian Calfskin",
+      "sizes": "32, 34, 36, 38",
+      "color": "Black / Gold",
+      "created_at": "2026-09-25T07:50:51.286236+00:00"
+    },
+    {
+      "id": "751dc4d3-f98f-4798-bde0-8092c36eaf11",
+      "title": "Bifold Card Wallet",
+      "image_url": "https://images.unsplash.com/photo-1680229892113-ba11b247ec0b",
+      "price": 2199.0,
+      "specifications": "6 card slots, RFID-blocking layer, gold-foil interior stamp.",
+      "category": "accessories",
+      "tags": [
+        "Trending",
+        "Discount: 20%"
+      ],
+      "fabric": "Vegetable-Tanned Leather",
+      "sizes": "Compact",
+      "color": "Espresso",
+      "created_at": "2026-09-25T07:50:51.286600+00:00"
+    }
+  ]
+}

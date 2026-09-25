@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Production builds
+dist/
+frontend/dist/
+
+# Environment variables & secrets
+.env
+backend/.env
+
+# Python bytecode & cache
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Local database file
+# (Keep local_db.json if you want initial seed data, or uncomment below to ignore)
+# backend/local_db.json
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db

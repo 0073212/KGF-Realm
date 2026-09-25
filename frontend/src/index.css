@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    :root {
+        --background: 0 0% 2%;
+        --foreground: 0 0% 100%;
+        --card: 0 0% 7%;
+        --card-foreground: 0 0% 100%;
+        --popover: 0 0% 7%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 44 65% 52%;
+        --primary-foreground: 0 0% 4%;
+        --secondary: 0 0% 10%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 0 0% 10%;
+        --muted-foreground: 0 0% 64%;
+        --accent: 44 65% 52%;
+        --accent-foreground: 0 0% 4%;
+        --destructive: 0 70% 45%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 15%;
+        --input: 0 0% 12%;
+        --ring: 44 65% 52%;
+        --radius: 0.125rem;
+    }
+}
+
+* {
+    border-color: hsl(var(--border));
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+    background-color: #050505;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #050505;
+}
+
+::selection {
+    background: rgba(212, 175, 55, 0.35);
+    color: #fff;
+}
+
+.font-display {
+    font-family: "Playfair Display", serif;
+    letter-spacing: -0.02em;
+}
+
+.font-body {
+    font-family: "Manrope", sans-serif;
+}
+
+.text-gold {
+    color: #d4af37;
+}
+
+.bg-gold {
+    background-color: #d4af37;
+}
+
+.border-gold {
+    border-color: #d4af37;
+}
+
+.glow-gold {
+    box-shadow:
+        0 0 25px rgba(212, 175, 55, 0.35),
+        0 0 60px rgba(212, 175, 55, 0.1);
+}
+
+.metallic-gold {
+    background: linear-gradient(135deg,
+            #f4d678 0%,
+            #d4af37 25%,
+            #b8860b 50%,
+            #e8c870 75%,
+            #d4af37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+.grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+
+}
+
+/* Glassmorphic panel */
+.glass {
+    background: rgba(10, 10, 10, 0.55);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Hide scrollbars but keep functionality on category strip */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Sharp inputs */
+.kgf-input {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0;
+    padding: 8px 0;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    transition: border-color 200ms ease;
+}
+
+.kgf-input:focus {
+    border-color: #d4af37;
+}
+
+.kgf-divider {
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(212, 175, 55, 0.35),
+            transparent);
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-image {
+    transition: transform 600ms cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
